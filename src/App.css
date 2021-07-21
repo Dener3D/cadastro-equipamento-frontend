@@ -77,6 +77,10 @@
   box-shadow: 0 0 1px 0;
 }
 
+.btnSalvar:hover{
+  border: solid 1px #61dafb;
+}
+
 .mainList{
   display: flex;
   justify-content: center;
@@ -114,7 +118,7 @@
   justify-content: center;
   text-align: center;
   background-color: #8b8b8b;
-  width: 50%;
+  width: 70%;
   border: solid 1px rgb(255, 255, 255);
   padding: 2px;
 }
@@ -125,7 +129,7 @@
   text-align: center;
   align-items: center;
   background-color: #4e4e4e;
-  width: 50%;
+  width: 30%;
   border: solid 1px rgb(250, 250, 250);
   padding: 2px;
 }

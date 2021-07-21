@@ -11,16 +11,16 @@ const theme = createMuiTheme({
   palette: {
     text: {
       primary: "#fff",
-      secondary: "#fc6a60"
+      secondary: "#fff"
     },
     primary: {
       main: "#fff",
     },
     secondary: {
-      main: "#8e78de",
+      main: "#fff",
     },
     background: {
-      primary: "blue"
+      primary: "#fff"
     }
   },
 });
@@ -105,7 +105,7 @@ function App() {
           <TextField className={classes.inputText} onChange={(e) => setDesc(e.target.value)} style={{ width: "100%", marginTop: "20px" }} fontVariant="primary" color='primary' placeholder="Digite o equipamento" id="outlined-basic" variant="outlined" label="Equipamento" />
           <TextField onChange={(e) => setPat(e.target.value)} style={{ width: "100%", marginTop: "20px" }} fontVariant="primary" color='primary' placeholder="Digite o patrimônio" id="outlined-basic" variant="outlined" label="Patrimônio" />
           <ThemeProvider theme={theme}>
-            <Button style={{ width: "7vw", minWidth: "100px", backgroundColor: "#222", marginTop: "20px" }} color="primary" background="primary" type="button" onClick={() => createEquipamento(desc, pat)} >SALVAR</Button>
+            <Button className="btnSalvar" style={{ width: "7vw", minWidth: "100px", backgroundColor: "#555", marginTop: "20px" }} color="secondary" background="primary" type="button" onClick={() => createEquipamento(desc, pat)} >SALVAR</Button>
           </ThemeProvider>
         </div>
         {loading ? (<p>Carregando dados...</p>) : (
@@ -116,7 +116,7 @@ function App() {
                   <div key={p._id} className="listContent">
                     <div className="listItem">
                     <div className="descricao"><p className="descricaoText">{p.descricao}</p></div>
-                    <div className="created"><p className="createdText">{p.created}</p></div>
+                    <div className="created"><p className="createdText">{"Pat: " + p.patrimonio}</p></div>
                     </div>
                     <div className="delete"><Button onClick={() => deleteEquipamento(p._id, p.descricao)} type="button">
                       <MdDelete size="30" color="#a6282c"></MdDelete>
