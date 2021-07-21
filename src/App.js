@@ -7,27 +7,6 @@ import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/sty
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
-const theme = createMuiTheme({
-  palette: {
-    text: {
-      primary: "#fff",
-      secondary: "#fff"
-    },
-    primary: {
-      main: "#fff",
-    },
-    secondary: {
-      main: "#fff",
-    },
-    background: {
-      primary: "#fff"
-    }
-  },
-});
-
-
-
-
 function App() {
   const [equipamentos, setEquipamento] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -90,7 +69,11 @@ function App() {
       borderColor: "#FFF",
       marginTop: "20px",
       fontVariant: "h3",
+    },
+    btnSalvar: {
+      color: "white",
     }
+    
   }))
 
   const classes = useStyles();
@@ -104,9 +87,9 @@ function App() {
         <div className="inputs">
           <TextField className={classes.inputText} onChange={(e) => setDesc(e.target.value)} style={{ width: "100%", marginTop: "20px" }} fontVariant="primary" color='primary' placeholder="Digite o equipamento" id="outlined-basic" variant="outlined" label="Equipamento" />
           <TextField onChange={(e) => setPat(e.target.value)} style={{ width: "100%", marginTop: "20px" }} fontVariant="primary" color='primary' placeholder="Digite o patrimônio" id="outlined-basic" variant="outlined" label="Patrimônio" />
-          <ThemeProvider theme={theme}>
-            <Button className="btnSalvar" style={{ width: "7vw", minWidth: "100px", backgroundColor: "#555", marginTop: "20px" }} color="secondary" background="primary" type="button" onClick={() => createEquipamento(desc, pat)} >SALVAR</Button>
-          </ThemeProvider>
+          
+            <Button className={classes.btnSalvar}style={{ width: "7vw", minWidth: "100px", backgroundColor: "#777", marginTop: "20px" }} color="white" type="button" onClick={() => createEquipamento(desc, pat)} >SALVAR</Button>
+          
         </div>
         {loading ? (<p>Carregando dados...</p>) : (
           <div className="mainList">
