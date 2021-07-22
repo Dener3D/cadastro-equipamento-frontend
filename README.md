@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Cadastro de Equipamentos - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação criada utilizando React.JS para o front-end, e Node.js para o back-end
+
+Link da aplicação: https://cadastro-equipamento-front.herokuapp.com/
 
 ## Available Scripts
 
