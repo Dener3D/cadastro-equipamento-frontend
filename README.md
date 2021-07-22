@@ -4,6 +4,8 @@ Aplicação criada utilizando React.JS para o front-end, e Node.js para o back-e
 
 Link da aplicação: https://cadastro-equipamento-front.herokuapp.com/
 
+<img src="https://github.com/Dener3D/cadastro-equipamento-frontend/blob/master/public/01.PNG" />
+
 ## Available Scripts
 
 In the project directory, you can run:
